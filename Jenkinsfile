@@ -1,10 +1,5 @@
 pipeline {
-  environment {
-    imagename = "jenkinstest"
-    registryCredential = 'test'
-    dockerImage = ''
-  }
-  tools{
+   tools{
     maven '3.8.5'
   }
   agent any
@@ -22,7 +17,6 @@ pipeline {
       steps{
        sh 'mvn clean install'
 
-       sh 'pwd'
       }
     }
 
